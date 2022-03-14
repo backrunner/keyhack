@@ -1,0 +1,38 @@
+{
+  "name": "keyhack",
+  "version": "0.1.0",
+  "description": "Use proxy to bind functions to combo key",
+  "main": "dist/keyhack.umd.js",
+  "module": "dist/keyhack.esm.js",
+  "typings": "dist/types/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "watch": "cross-env NODE_ENV=dev rollup -c rollup.config.ts -w",
+    "build": "rimraf ./dist && tsc --module commonjs && cross-env NODE_ENV=production rollup -c rollup.config.ts && rimraf ./dist/lib"
+  },
+  "author": "BackRunner",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@types/node": "^16.11.26",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.10.0",
+    "eslint-config-alloy": "^4.5.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.70.0",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  }
+}
