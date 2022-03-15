@@ -1,6 +1,6 @@
 {
-  "name": "keyhack",
-  "version": "0.1.0",
+  "name": "keyhacking",
+  "version": "0.1.1",
   "description": "Use proxy to bind functions to combo key",
   "main": "dist/keyhack.umd.js",
   "module": "dist/keyhack.esm.js",

@@ -9,14 +9,15 @@ This library has integrated `mousetrap` which will provide the basic ability to 
 Step 1: Install this package.
 
 ```bash
-npm install keyhack
+# "hack" is a sensitive word, so I can't publish a package with name "keyhack" :(
+npm install keyhacking
 ```
 
 Step 2: Import it to your project.
 
 ```js
 // here's an example if you want to bind a function to "ctrl+s"
-import { Ctrl } from 'keyhack';
+import { Ctrl } from 'keyhacking';
 
 Ctrl.S = () => {
   console.log('ctrl+s triggered').
@@ -31,7 +32,7 @@ We provide `Ctrl`, `Shift`, `Alt`, `Command`, `Option`, `Meta`, `Mod`(based on `
 If you want to custom your special combo key, you can do this:
 
 ```js
-import { KeyHackFactory } from 'keyhack';
+import { KeyHackFactory } from 'keyhacking';
 
 // for example, I want to build a "a+s" combo key
 const A = KeyHackFactory('a');
