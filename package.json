@@ -12,6 +12,16 @@
     "watch": "cross-env NODE_ENV=dev rollup -c rollup.config.ts -w",
     "build": "rimraf ./dist && tsc --module commonjs && cross-env NODE_ENV=production rollup -c rollup.config.ts && rimraf ./dist/lib"
   },
+  "keywords": [
+    "keyboard",
+    "utility",
+    "tool"
+  ],
+  "homepage": "https://github.com/backrunner/keyhack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/backrunner/keyhack.git"
+  },
   "author": "BackRunner",
   "license": "MIT",
   "devDependencies": {
