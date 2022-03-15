@@ -1,4 +1,4 @@
-# ⌨ KeyHack
+# ⌨ KeyHack ⌨
 
 Use proxy to bind functions to combo keys, less than 3KB after gzip.
 
