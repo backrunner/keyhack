@@ -1,20 +1,44 @@
-# keyhack
+# ⌨ KeyHack
 
-Use proxy to bind functions to combo key
+Use proxy to bind functions to combo keys, less than 3KB after gzip.
 
-This project is created by [create-a-typescript-lib](https://github.com/backrunner/create-a-typescript-lib).
+This library has integrated `mousetrap` which will provide the basic ability to bind functions to combo keys.
 
-## Usage
+## 🔧 Usage
 
-To build this project, you can run this command:
+Step 1: Install this package.
 
 ```bash
-npm run build
+npm install keyhack
 ```
 
-Also, you can use `npm run watch` to start a file changes.
+Step 2: Import it to your project.
 
-All changes you make will immediately trigger compilation and take effect on the generated script.
+```js
+// here's an example if you want to bind a function to "ctrl+s"
+import { Ctrl } from 'keyhack';
+
+Ctrl.S = () => {
+  console.log('ctrl+s triggered').
+};
+
+// if you want to unbind it, do this
+delete Ctrl.S;
+```
+
+We provide `Ctrl`, `Shift`, `Alt`, `Command`, `Option`, `Meta`, `Mod`(based on `mousetrap`, it will support cross-platform binding) as the first key in the combo.
+
+If you want to custom your special combo key, you can do this:
+
+```js
+import { KeyHackFactory } from 'keyhack';
+
+// for example, I want to build a "a+s" combo key
+const A = KeyHackFactory('a');
+A.S = () => {
+  console.log('a+s triggered');
+};
+```
 
 ## License
 
